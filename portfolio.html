@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color:black;
+            color: rgba(255, 255, 255, 0.926);
+        }
+        header{
+            background-color: rgb(20, 20, 20);
+            text-align: center;
+            position: sticky;
+            top: 0;
+            padding: 10px;
+            font-size: medium;
+            font-weight: bold;
+            z-index: 9;
+        }
+        p{
+            font-family:'Times New Roman', Times, serif;
+            font-size: small;
+            font-weight: 200;
+            font-style: normal;
+        }
+        section{
+            background-color: rgb(20, 20, 20);
+            border-radius: 5px;
+            padding: 50px;
+            margin: 50px;
+            
+        }
+        section:hover{
+            transform: scale(1.02);
+        }
+        
+        header nav{
+            padding: 5px;
+            margin: 15px;
+        }
+        nav a{
+            color: aliceblue;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h2{
+            color: brown;
+        }
+        .container{
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            
+        }
+        .card{
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 2px;
+            background-color: rgb(75, 74, 72);
+            width: 200px;
+            height: 20px;
+            text-align:center;
+        }
+        .card:hover{transform: translateY(-10px);}
+        .contact-form{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        .contact-form input, .contact-form textarea{
+            background-color: black;
+            border: 2px solid black;
+            padding: 5px;
+            margin: 5px;
+            color: aliceblue;
+        }
+        button{
+            box-sizing: border-box;
+            padding: 5px;
+            margin: 5px;
+            height: 50px;
+            width: 150px;
+            border: 2px solid black;
+            border-radius: 7px;
+            cursor: pointer;
+            background-color: brown;
+            color: aliceblue;
+        }
+        button:hover{
+            background-color: rgb(239, 64, 64);
+        }
+        
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sipsarani Tripathy</h1>
+      <p>Software Engineer (AWS Certified Cloud
+        Practitioner)
+        </p>
+        <p>Email: sipsatripathy13@gmail.com | Phone: +44-7401578896 | Location: Manchester, United Kingdom</p>
+        <p>
+            <a href="#">LinkedIn</a> | 
+            <a href="#">GitHub</a> | 
+            <a href="#">Portfolio</a>
+        </p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Experienced in designing and implementing robust software solutions.
+        Skilled in various programming languages and frameworks, with a knack
+        for problem-solving and improving system performance. A collaborative
+        team player who thrives in fast-paced environments.
+      </p>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="container">
+        <div class="card">Python</div>
+        <div class="card">JavaScript</div>
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">React</div>
+        <div class="card">C</div>
+        <div class="card">C++</div>
+        <div class="card">MATLAB</div>
+      </div>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="container">
+        <div class="card">Responsive E-commerce Site</div>
+        <div class="card">Advanced To-Do App</div>
+        <div class="card">Application Development</div>
+        <div class="card">Visual Inspection Systems </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-form">
+        <input type="text" placeholder="Your Name" id="name">
+        <input type="text" placeholder="Your Email" id="email">
+        <textarea placeholder="Your Message" id="message"></textarea>
+      </div>
+      <button onclick="sendMessage()">Send Message</button>
+      <script>
+        function sendMessage (){
+            
+            name = document.querySelector("#name").value;
+            email_id = document.querySelector("#email").value;
+            text_area = document.querySelector("#message").value
+            alert(`Thank you, ${name}! Your message has been sent.`)
+            document.querySelector("#name").value = "";
+            document.querySelector("#email").value = "";
+            document.querySelector("#message").value = "";
+        }
+      </script>
+    </section>
+  </body>
+</html>
